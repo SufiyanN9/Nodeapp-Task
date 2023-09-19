@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nodejs-deployment
+  template:
+    metadata:
+      labels:
+        app: nodejs-deployment
+    spec:
+      containers:
+      - name: nodejs-deployment
+        image: sufiyann9/mynodeapp
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+
+
