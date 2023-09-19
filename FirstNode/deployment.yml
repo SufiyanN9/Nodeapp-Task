@@ -5,14 +5,14 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: nodejs-deployment
+      app: nodejs-app
   template:
     metadata:
       labels:
-        app: nodejs-deployment
+        app: nodejs-app
     spec:
       containers:
-      - name: nodejs-deployment
+      - name: nodejs-app
         image: sufiyann9/mynodeapp
         resources:
           limits:
